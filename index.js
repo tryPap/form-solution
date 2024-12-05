@@ -10,16 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
 
     const number = numberIn.value.trim();
     const areNumbers = /^\d+$/.test(number);
 
-    console.log(number);
     if (!areNumbers) {
+      e.preventDefault();
       window.alert("Please enter a number!");
     } else {
       if (number <= 10) {
+        e.preventDefault();
         window.alert("Please enter a number bigger than 10!");
       } else {
         window.alert("Form Submited !!");
